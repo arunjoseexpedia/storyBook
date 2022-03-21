@@ -8,6 +8,21 @@
 .height-80 {
   height: 80px;
 }
+.pagetitle {
+  border: 1px solid #d6d9dc;
+  min-width: 800px;
+}
 .activedata {
   background-color: #ccc;
+}
+textarea {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  min-width: 800px;
+  min-height: 400px;
+  margin-bottom: 10px;
+  padding: 7px;
+  resize: none;
 }
