@@ -11,17 +11,14 @@ export default function StoryBook() {
     setText(arry[0].text);
   }, []);
 
-  const handleChange = (event) => {
+  const handleChange = (event, id) => {
     event.preventDefault();
 
     setText(data[event.target.id - 1].text);
-    setActive(event.target.id);
-    console.log("active", active);
+
+    setActive(Number(event.target.id));
   };
-  const rootClassNames = () => {
-    let names = ["border", "height-80"];
-    return names.join(" ");
-  };
+
   return (
     <div className="container-fluid">
       <div className="row border">
@@ -29,14 +26,14 @@ export default function StoryBook() {
           {data &&
             data.length > 0 &&
             data.map((item, index) => {
-              console.log("index", index + 1);
-
               return (
                 <div
                   key={index}
-                  className="border height-80"
+                  className={`height-80 border + ${
+                    active === index + 1 ? "activedata" : ""
+                  }`}
                   id={item.id}
-                  onClick={handleChange}
+                  onClick={(e) => handleChange(e, index)}
                 >
                   {item.title.toUpperCase()}
                 </div>
