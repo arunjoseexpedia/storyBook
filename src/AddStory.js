@@ -1,4 +1,7 @@
-export default function AddStory() {
+export default function AddStory(props) {
+  const viewStory = () => {
+    props.viewStory();
+  };
   return (
     <div className="container-fluid">
       <form align="center">
@@ -16,7 +19,9 @@ export default function AddStory() {
         </div>
         <div>
           <button type="submit">Save</button>
-          <button type="submit">Back</button>
+          <button type="submit" onClick={() => viewStory()}>
+            Back
+          </button>
         </div>
       </form>
     </div>

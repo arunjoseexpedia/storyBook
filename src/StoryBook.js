@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import { getStoryDetails } from "./GetStoryDetails";
 export default function StoryBook(props) {
   const [data, setData] = useState([]);
   const [text, setText] = useState("");
   const [active, setActive] = useState(1);
 
   useEffect(() => {
-    let arry = getStoryDetails();
+    let arry = props.data;
     setData([...arry]);
-    setText(arry[0].text);
-  }, []);
+    if (arry && arry.length > 0) {
+      setText(arry[0].text);
+    }
+  }, [props.data]);
 
   const addStory = () => {
     props.addStory();
