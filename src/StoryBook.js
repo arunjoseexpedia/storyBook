@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getStoryDetails } from "./GetStoryDetails";
-export default function StoryBook() {
+export default function StoryBook(props) {
   const [data, setData] = useState([]);
   const [text, setText] = useState("");
   const [active, setActive] = useState(1);
@@ -10,6 +10,10 @@ export default function StoryBook() {
     setData([...arry]);
     setText(arry[0].text);
   }, []);
+
+  const addStory = () => {
+    props.addStory();
+  };
 
   const handleChange = (event, id) => {
     event.preventDefault();
@@ -40,7 +44,18 @@ export default function StoryBook() {
               );
             })}
         </div>
-        <div className="col-8">{text}</div>
+        <div className="col-8">
+          <button onClick={() => addStory()}>
+            <b>Add New Page + </b>
+          </button>
+          <br />
+
+          {text}
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
       </div>
     </div>
   );
