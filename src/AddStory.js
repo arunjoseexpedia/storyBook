@@ -1,11 +1,26 @@
+import { useState } from "react";
+
 export default function AddStory(props) {
+  const [title, setTitle] = useState("");
+  const [paragraph, setPara] = useState("");
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    if (event.target.id === "title") {
+      setTitle(event.target.value);
+    }
+    if (event.target.id === "para") {
+      setPara(event.target.value);
+    }
+  };
   const viewStory = (event) => {
     event.preventDefault();
     props.viewStory();
   };
   const updateStory = (event) => {
     event.preventDefault();
-    props.updateStory();
+    console.log("title", title);
+    console.log("paragraph", paragraph);
   };
   return (
     <div className="container-fluid">
@@ -14,12 +29,20 @@ export default function AddStory(props) {
           <label>
             Page Title
             <br />
-            <input className="pagetitle" type="text" required />
+            <input
+              className="pagetitle"
+              onChange={handleChange}
+              id="title"
+              type="text"
+              required
+            />
           </label>
         </div>
         <div>
           <label>
-            <textarea required> </textarea>
+            <textarea onChange={handleChange} id="para" required>
+              {" "}
+            </textarea>
           </label>
         </div>
         <div>
