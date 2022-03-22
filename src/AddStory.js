@@ -54,7 +54,7 @@ export default function AddStory(props) {
               {" "}
             </textarea>
           </label>
-          {wordCount}
+          {wordCount > 0 ? wordCount : ""}
         </div>
         <div>
           <Button className="backViolet" type="submit">
