@@ -9,7 +9,7 @@ export default function AddStory(props) {
   };
   return (
     <div className="container-fluid">
-      <form align="center">
+      <form align="center" onSubmit={updateStory}>
         <div>
           <label>
             Page Title
@@ -23,9 +23,7 @@ export default function AddStory(props) {
           </label>
         </div>
         <div>
-          <button type="submit" onClick={(event) => updateStory(event)}>
-            Save
-          </button>
+          <button type="submit">Save</button>
           <button type="button" onClick={(event) => viewStory(event)}>
             Back
           </button>
