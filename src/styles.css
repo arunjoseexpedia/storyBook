@@ -15,6 +15,11 @@
 .activedata {
   background-color: #ccc;
 }
+.button-corner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
 textarea {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;

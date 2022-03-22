@@ -47,16 +47,13 @@ export default function StoryBook(props) {
             })}
         </div>
         <div className="col-8">
-          <button onClick={() => addStory()}>
-            <b>Add New Page + </b>
-          </button>
           <br />
 
           {text}
-          <br />
-          <br />
-          <br />
-          <br />
+
+          <button className="button-corner" onClick={() => addStory()}>
+            <b>Add New Page + </b>
+          </button>
         </div>
       </div>
     </div>
