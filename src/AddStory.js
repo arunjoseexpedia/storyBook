@@ -34,6 +34,7 @@ export default function AddStory(props) {
               onChange={handleChange}
               id="title"
               type="text"
+              placeholder="Page Title"
               required
             />
           </label>
