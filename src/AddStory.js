@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "@mui/material/Button";
 
 export default function AddStory(props) {
   const [title, setTitle] = useState("");
@@ -45,10 +46,17 @@ export default function AddStory(props) {
           </label>
         </div>
         <div>
-          <button type="submit">Save</button>
-          <button type="button" onClick={(event) => viewStory(event)}>
-            Back
-          </button>
+          <Button variant="contained" type="submit">
+            SAVE PAGE
+          </Button>
+          &nbsp;
+          <Button
+            variant="contained"
+            type="button"
+            onClick={(event) => viewStory(event)}
+          >
+            BACK TO BOOK
+          </Button>
         </div>
       </form>
     </div>
