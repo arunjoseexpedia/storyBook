@@ -20,12 +20,16 @@ export default function App() {
     setView("view");
   };
 
+  const updateStory = () => {
+    console.log("updateStory");
+  };
+
   return (
     <div>
       {view === "view" ? (
         <StoryBook addStory={addStory} data={data} />
       ) : (
-        <AddStory viewStory={viewStory} />
+        <AddStory viewStory={viewStory} updateStory={updateStory} />
       )}
     </div>
   );

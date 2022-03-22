@@ -5,7 +5,7 @@ export default function AddStory(props) {
   };
   const updateStory = (event) => {
     event.preventDefault();
-    console.log("updateStory");
+    props.updateStory();
   };
   return (
     <div className="container-fluid">
