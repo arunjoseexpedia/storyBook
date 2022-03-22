@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 export default function AddStory(props) {
   const [title, setTitle] = useState("");
   const [paragraph, setPara] = useState("");
+  const [wordCount, setWordCount] = useState(0);
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -11,6 +12,13 @@ export default function AddStory(props) {
       setTitle(event.target.value);
     }
     if (event.target.id === "para") {
+      let arry = event.target.value.split(" ");
+      for (let i = 0; i < arry.length; i++) {
+        if (arry[i] !== "") {
+          setWordCount((count) => count + 1);
+        }
+      }
+
       setPara(event.target.value);
     }
   };
@@ -46,6 +54,7 @@ export default function AddStory(props) {
               {" "}
             </textarea>
           </label>
+          {wordCount}
         </div>
         <div>
           <Button className="backViolet" type="submit">
