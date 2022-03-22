@@ -15,6 +15,9 @@
 .height-80 {
   height: 80px;
 }
+.padd-right {
+  padding-right: 0px !important;
+}
 .pagetitle {
   border: 1px solid #d6d9dc;
   min-width: 800px;

@@ -28,8 +28,8 @@ export default function StoryBook(props) {
 
   return (
     <div className="container-fluid">
-      <div className="row border">
-        <div className="col-4 backgroundColor">
+      <div className="row">
+        <div className="col-4 backgroundColor padd-right">
           {data &&
             data.length > 0 &&
             data.map((item, index) => {
