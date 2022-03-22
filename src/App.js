@@ -22,9 +22,10 @@ export default function App() {
 
   const updateStory = (title, para) => {
     let obj = {};
+    obj["id"] = data.pop().id + 1;
     obj["title"] = title;
-    obj["para"] = para;
-    console.log(obj);
+    obj["text"] = para;
+    setData((oldArray) => [...oldArray, obj]);
   };
 
   return (
