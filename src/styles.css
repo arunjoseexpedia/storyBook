@@ -18,7 +18,8 @@
 .button-corner {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 50%;
+  right: 50%;
 }
 textarea {
   font-family: "Helvetica", "Arial", sans-serif;
