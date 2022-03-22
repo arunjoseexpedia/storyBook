@@ -1,6 +1,11 @@
 export default function AddStory(props) {
-  const viewStory = () => {
+  const viewStory = (event) => {
+    event.preventDefault();
     props.viewStory();
+  };
+  const updateStory = (event) => {
+    event.preventDefault();
+    console.log("updateStory");
   };
   return (
     <div className="container-fluid">
@@ -14,12 +19,14 @@ export default function AddStory(props) {
         </div>
         <div>
           <label>
-            <textarea> </textarea>
+            <textarea required> </textarea>
           </label>
         </div>
         <div>
-          <button type="submit">Save</button>
-          <button type="submit" onClick={() => viewStory()}>
+          <button type="submit" onClick={(event) => updateStory(event)}>
+            Save
+          </button>
+          <button type="button" onClick={(event) => viewStory(event)}>
             Back
           </button>
         </div>
