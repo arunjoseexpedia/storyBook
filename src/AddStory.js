@@ -19,8 +19,7 @@ export default function AddStory(props) {
   };
   const updateStory = (event) => {
     event.preventDefault();
-    console.log("title", title);
-    console.log("paragraph", paragraph);
+    props.updateStory(title, paragraph);
   };
   return (
     <div className="container-fluid">

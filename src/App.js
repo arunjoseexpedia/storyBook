@@ -20,8 +20,11 @@ export default function App() {
     setView("view");
   };
 
-  const updateStory = () => {
-    console.log("updateStory");
+  const updateStory = (title, para) => {
+    let obj = {};
+    obj["title"] = title;
+    obj["para"] = para;
+    console.log(obj);
   };
 
   return (
