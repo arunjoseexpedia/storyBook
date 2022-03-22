@@ -48,7 +48,7 @@ export default function AddStory(props) {
           </label>
         </div>
         <div>
-          <Button variant="contained" type="submit">
+          <Button className="backViolet" type="submit">
             SAVE PAGE
           </Button>
           &nbsp;

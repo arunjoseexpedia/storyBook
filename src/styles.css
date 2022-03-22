@@ -5,6 +5,10 @@
 .border {
   border: 1px solid #ccc;
 }
+.backViolet {
+  background: #b335dc !important;
+  color: white !important;
+}
 .backgroundColor {
   background: #eaeaea;
 }
