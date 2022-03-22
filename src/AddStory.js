@@ -39,6 +39,7 @@ export default function AddStory(props) {
             />
           </label>
         </div>
+        <br />
         <div>
           <label>
             <textarea onChange={handleChange} id="para" required>
