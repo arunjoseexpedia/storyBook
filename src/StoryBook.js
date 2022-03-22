@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Button from "@mui/material/Button";
 export default function StoryBook(props) {
   const [data, setData] = useState([]);
   const [text, setText] = useState("");
@@ -51,9 +52,13 @@ export default function StoryBook(props) {
 
           {text}
 
-          <button className="button-corner" onClick={() => addStory()}>
+          <Button
+            className="button-corner"
+            variant="outlined"
+            onClick={() => addStory()}
+          >
             <b>Add New Page + </b>
-          </button>
+          </Button>
         </div>
       </div>
     </div>
