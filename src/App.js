@@ -22,7 +22,7 @@ export default function App() {
 
   const updateStory = (title, para) => {
     let obj = {};
-    obj["id"] = 11;
+    obj["id"] = data.slice(-1)[0].id + 1;
     obj["title"] = title;
     obj["text"] = para;
     setData((oldArray) => [...oldArray, obj]);
