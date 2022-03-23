@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 export default function StoryBook(props) {
   const [data, setData] = useState([]);
   const [text, setText] = useState("");
+  const [title, setTitle] = useState("");
   const [active, setActive] = useState(1);
 
   useEffect(() => {
@@ -11,6 +12,7 @@ export default function StoryBook(props) {
     setData([...arry]);
     if (arry && arry.length > 0) {
       setText(arry[0].text);
+      setTitle(arry[0].title);
     }
   }, [props.data]);
 
@@ -20,7 +22,7 @@ export default function StoryBook(props) {
 
   const handleChange = (event, id) => {
     event.preventDefault();
-
+    setTitle(data[event.target.id - 1].title);
     setText(data[event.target.id - 1].text);
 
     setActive(Number(event.target.id));
@@ -49,7 +51,8 @@ export default function StoryBook(props) {
         </div>
         <div className="col-8">
           <br />
-
+          <b>{title}</b>
+          <br />
           {text}
 
           <Button
