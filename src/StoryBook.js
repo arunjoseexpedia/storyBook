@@ -51,7 +51,9 @@ export default function StoryBook(props) {
         </div>
         <div className="col-8">
           <br />
-          <b>{title}</b>
+          <b>
+            <center>{title}</center>
+          </b>
           <br />
           {text}
 
@@ -60,7 +62,7 @@ export default function StoryBook(props) {
             variant="outlined"
             onClick={() => addStory()}
           >
-            <b>Add New Page &nbsp; + </b>
+            Add New Page &nbsp; +
           </Button>
         </div>
       </div>

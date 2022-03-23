@@ -31,8 +31,11 @@
 .button-corner {
   position: fixed !important;
   bottom: 120px;
-  left: 50%;
-  right: 50%;
+  color: black !important;
+  left: 86%;
+  right: 14%;
+  border: 0px !important;
+  text-transform: capitalize !important;
 }
 textarea {
   font-family: "Helvetica", "Arial", sans-serif;
