@@ -1,9 +1,11 @@
 import React from "react";
-import { GitHubIcon } from "@mui/icons-material/GitHub";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => (
   <footer className="footer">
-    <center>Footer</center>
+    <center>
+      <GitHubIcon />
+    </center>
   </footer>
 );
 
