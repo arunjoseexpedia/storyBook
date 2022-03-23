@@ -3,6 +3,7 @@ import StoryBook from "./StoryBook";
 import AddStory from "./AddStory";
 import { useState, useEffect } from "react";
 import { getStoryDetails } from "./GetStoryDetails";
+import Footer from "./Footer";
 
 export default function App() {
   const [view, setView] = useState("view");
@@ -35,6 +36,7 @@ export default function App() {
       ) : (
         <AddStory viewStory={viewStory} updateStory={updateStory} />
       )}
+      <Footer />
     </div>
   );
 }

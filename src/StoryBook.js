@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
+
 export default function StoryBook(props) {
   const [data, setData] = useState([]);
   const [text, setText] = useState("");
@@ -7,7 +8,7 @@ export default function StoryBook(props) {
 
   useEffect(() => {
     let arry = props.data;
-    console.log(props.data);
+
     setData([...arry]);
     if (arry && arry.length > 0) {
       setText(arry[0].text);
@@ -29,7 +30,7 @@ export default function StoryBook(props) {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-4 backgroundColor padd-right">
+        <div className="col-4 backgroundColor padd-right padd-left">
           {data &&
             data.length > 0 &&
             data.map((item, index) => {

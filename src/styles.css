@@ -18,6 +18,9 @@
 .padd-right {
   padding-right: 0px !important;
 }
+.padd-left {
+  padding-left: 0px !important;
+}
 .pagetitle {
   border: 1px solid #d6d9dc;
   min-width: 800px;
@@ -27,7 +30,7 @@
 }
 .button-corner {
   position: fixed !important;
-  bottom: 20px;
+  bottom: 120px;
   left: 50%;
   right: 50%;
 }
@@ -41,4 +44,12 @@ textarea {
   margin-bottom: 10px;
   padding: 7px;
   resize: none;
+}
+.footer {
+  background-color: #3b5998;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  font-size: 25px;
 }
