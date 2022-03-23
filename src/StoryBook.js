@@ -57,7 +57,7 @@ export default function StoryBook(props) {
             variant="outlined"
             onClick={() => addStory()}
           >
-            <b>Add New Page + </b>
+            <b>Add New Page &nbsp; + </b>
           </Button>
         </div>
       </div>
